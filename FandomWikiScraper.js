@@ -1,4 +1,3 @@
-let link = "https://typemoon.fandom.com/wiki/Galahad"
 async function retrieve(a){
 	const axios = await import("axios")
 	const request = {
@@ -9,7 +8,4 @@ async function retrieve(a){
 	return response
 }
 
-async function potato(link){
-	console.log( await retrieve(link))
-}
-potato(link)
+module.exports = { retrieve: retrieve }
